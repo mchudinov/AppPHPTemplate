@@ -11,6 +11,7 @@ class TestRunner
     {
         self::$_suiteUnit = new PHPUnit_Framework_TestSuite();
         self::$_suiteUnit->addTestSuite("\MyClassTest");
+		self::$_suiteUnit->addTestSuite('\MyNamespace\MyClassTest');
         return self::$_suiteUnit;
     }
 }  
