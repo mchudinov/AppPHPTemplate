@@ -1,5 +1,5 @@
 <?php
-defined('APPPATH') or die('No direct script access.');
+defined('APPROOT') or die('No direct script access.');
 
 /**
  * @codeCoverageIgnore
@@ -14,35 +14,35 @@ class Autoloader
 
     public static function Load($strClassName)
     {
-        $strFilePath = APPPATH.'src/classes/'.$strClassName.'.php';
+        $strFilePath = APPROOT.'src/classes/'.$strClassName.'.php';
         if (file_exists($strFilePath)) 
         {
             require_once($strFilePath);
             return true;
         }
         
-        $strFilePath = APPPATH.'src'.$strClassName.'.php';
+        $strFilePath = APPROOT.'src'.$strClassName.'.php';
         if (file_exists($strFilePath)) 
         {
             require_once($strFilePath);
             return true;
         }
         
-        $strFilePath = APPPATH.$strClassName.'.php';
+        $strFilePath = APPROOT.$strClassName.'.php';
         if (file_exists($strFilePath)) 
         {
             require_once($strFilePath);
             return true;
         }        
         
-        $strFilePath = APPPATH.'tests/classes/'.$strClassName.'.php';
+        $strFilePath = APPROOT.'tests/classes/'.$strClassName.'.php';
         if (file_exists($strFilePath)) 
         {
             require_once($strFilePath);
             return true;
         }
         
-        $strFilePath = APPPATH.'tests/'.$strClassName.'.php'; 
+        $strFilePath = APPROOT.'tests/'.$strClassName.'.php'; 
         if (file_exists($strFilePath)) 
         {
             require_once($strFilePath);

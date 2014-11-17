@@ -1,7 +1,7 @@
 <?php
-define('APPPATH', __DIR__.DIRECTORY_SEPARATOR);
-require_once APPPATH.'vendor/autoload.php';
-require_once APPPATH.'src/Autoloader.php';
+define('APPROOT', __DIR__.DIRECTORY_SEPARATOR);
+require_once APPROOT.'vendor/autoload.php';
+require_once APPROOT.'src/Autoloader.php';
 
 $m = new MyClass();
 echo $m->getTrue();

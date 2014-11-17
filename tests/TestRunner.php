@@ -1,7 +1,7 @@
 <?php
 require "phpunitbootstrap.php";                                             
 
-defined('APPPATH') or die('No direct script access.');
+defined('APPROOT') or die('No direct script access.');
                                       
 class TestRunner
 {

@@ -1,5 +1,5 @@
 <?php
-define('APPPATH', dirname(__DIR__).DIRECTORY_SEPARATOR);
-require_once APPPATH.'vendor/autoload.php';
-require_once APPPATH.'src/Autoloader.php';
+define('APPROOT', dirname(__DIR__).DIRECTORY_SEPARATOR);
+require_once APPROOT.'vendor/autoload.php';
+require_once APPROOT.'src/Autoloader.php';
 define('TESTRUNNER',true);
